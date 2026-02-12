@@ -86,3 +86,33 @@ def ganasteLaMateria(nota) :
             return(F"{nota} exelente - ganaste")
     else :
         return(F"solo es del 0.1 al 5.0 y tu pusiste {nota}")
+
+
+# indice de masa muscular 
+
+
+peso = 20
+altura = 1.60
+
+def calcularIMC(peso , altura):
+    imc = peso / (altura * altura)
+    return imc
+
+def estadoDelImc(imc):
+    if imc >= 18.5 and  imc <= 24.9 :
+        return("normal")
+    elif imc >= 25 and  imc <= 29.9 :
+        return("sobre peso")
+    elif imc >= 30 and imc <=  34.9 :
+        return("obesidad 1")
+    elif imc >= 35 and imc <=  39.9 :
+        return("obesidad 2")
+    elif imc >= 40 :
+        return("obesidad 3")
+    else :
+        return("desnutricion")
+    
+indice1 = calcularIMC(20 , 1.74)
+indice2 = estadoDelImc(indice1)
+print(indice1)
+print(indice2)
